@@ -3,6 +3,6 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /EPSP_DJ_st
 COPY requirements.txt /EPSP_DJ_st/requirements.txt
 RUN pip install -r requirements.txt
-COPY . /EPSP_DJ_st/
+COPY . /EPSP_DJ_st
 
 CMD python manage.py runserver 0.0.0.0:8000
