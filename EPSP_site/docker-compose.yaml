@@ -2,8 +2,23 @@ version: '3.11'
 services:
   backend:
     build: .
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/EPSP_DJ_st
     ports:
       - 8000:8000
-      
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:15.3
+    restart: always
+    environment:
+      - POSTGRES_DB=EPSP_DJANET_Site
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Postgres1997
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - 33066:5432
+    
