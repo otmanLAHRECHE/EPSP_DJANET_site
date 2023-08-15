@@ -22,9 +22,8 @@ const Nav = () => {
   return (
     <nav className={`navbar navbar-expand-md bg-light ${navClass}`}>
       <div className='container'>
-        <a className='navbar-brand' href='!#'>
-          <span>Root</span>
-          <i className='fas fa-circle ml-1' />
+        <a className='navbar-brand'>
+          <span>EPSP DJANET</span>
         </a>
         <div
           className={`navbar-toggler nav-icon ${(() => {
@@ -46,23 +45,23 @@ const Nav = () => {
         >
           <ul className='navbar-nav ml-auto'>
             <li className='nav-item'>
-              <Link target='home' offset={-120} classes='nav-link'>
-                Home
+              <Link target='home' classes='nav-link'>
+                Acceil
               </Link>
             </li>
             <li className='nav-item'>
               <Link target='about' classes='nav-link'>
-                About
+                Présentation
               </Link>
             </li>
             <li className='nav-item'>
               <Link target='services' classes='nav-link'>
-                Services
+                Actualités
               </Link>
             </li>
             <li className='nav-item'>
               <Link target='blog' classes='nav-link'>
-                Blog
+                Structures
               </Link>
             </li>
             <li className='nav-item'>

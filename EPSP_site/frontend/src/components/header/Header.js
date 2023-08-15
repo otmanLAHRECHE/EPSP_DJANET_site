@@ -5,10 +5,12 @@ import TopBar from './TopBar';
 
 const header = () => {
   return (
+    
     <div className='header'>
       <TopBar />
       <Nav />
     </div>
+    
   );
 };
 

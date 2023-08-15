@@ -18,11 +18,9 @@ export default class App extends Component {
             <Fragment>
             <Header />
             <main>
-              <div>
                 <Routes>
                   <Route exact path="/" element={<Acceil/>} />
                 </Routes>
-              </div>
               </main>
               <Footer />
             </Fragment>
