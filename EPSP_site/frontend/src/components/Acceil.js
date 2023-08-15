@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import aboutImage from '../assets/images/epsplogo.png';
+import Grid from '@mui/material/Grid';
+import FeaturedPost from './sections/FeaturedPostes';
 
 const spanStyle = {
     padding: '20px',
@@ -31,6 +33,34 @@ const spanStyle = {
     },
   ];
 
+  const featuredPosts = [
+    {
+      title: 'Featured post',
+      date: 'Nov 12',
+      description:
+        'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      image: 'https://source.unsplash.com/random?wallpapers',
+      imageLabel: 'Image Text',
+      type: 'Covid19'
+    },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Information'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
+      },
+  ];
+
 const Acceil = () => {
 
 
@@ -54,6 +84,7 @@ const Acceil = () => {
                     ))} 
                 </Slide>
             </div>
+            <div className='bg-light'>
             <div className='container'>
                 <div className='container pt-2 pb-5'>
                     <div className='section-header pt-5 pb-5 text-center'>
@@ -100,11 +131,26 @@ const Acceil = () => {
                     </div>
                 </div>
 
+                <Grid container spacing={5} sx={{ mt: 3 }}>
+                    <Grid item xs={8}>
+                    {featuredPosts.map((post) => (
+                          <FeaturedPost key={post.title} post={post} />
+                        ))}
+
+                    </Grid>
+                    <Grid item xs={4}>
+                        
+                    </Grid>
+
+
+                </Grid>
+
             </div>
-                
+            </div>
 
+            <br/>
+            <br/>
             
-
         </Fragment>
     );
 };
