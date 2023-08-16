@@ -4,6 +4,8 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Acceil from "./components/Acceil"
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
+import Presentation from "./components/Presentation";
+import Actualite from "./components/Actualite";
 
 import * as serviceWorker from './serviceWorker';
 
@@ -20,6 +22,8 @@ export default class App extends Component {
             <main>
                 <Routes>
                   <Route exact path="/" element={<Acceil/>} />
+                  <Route exact path="/Presentation" element={<Presentation/>} />
+                  <Route exact path="/Actualite" element={<Actualite/>} />
                 </Routes>
               </main>
               <Footer />

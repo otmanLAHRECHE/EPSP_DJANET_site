@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const [navClass, setNavClass] = useState('');
   const [toggeledNav, settoggeledNav] = useState(false);
   const [activeNav, setActiveNav] = useState([true,false,false,false,false]);
+  const navigate = useNavigate();
 
   const toggleNav = () => {
     settoggeledNav(!toggeledNav);
@@ -25,14 +27,17 @@ const Nav = () => {
 
   const clickAcceil = () =>{
     setActiveNav([true,false,false,false,false]);
+    navigate("/")
   };
 
   const clickPresentation = () =>{
     setActiveNav([false,true,false,false,false]);
+    navigate("/Presentation")
   };
 
   const clickActualite = () =>{
     setActiveNav([false,false,true,false,false]);
+    navigate("/Actualite")
   };
 
   const clickStructure = () =>{
@@ -42,7 +47,6 @@ const Nav = () => {
   const clickContact = () =>{
     setActiveNav([false,false,false,false,true]);
   };
-
 
 
   return (
