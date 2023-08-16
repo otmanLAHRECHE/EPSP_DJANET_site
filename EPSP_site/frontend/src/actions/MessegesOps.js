@@ -1,4 +1,4 @@
-export async function addNewFournisseur(data){
+export async function createMessage(data){
     const response = await fetch(
         '/api/create_message/',
         {

@@ -50,7 +50,21 @@ def getAllSlidingImages(request):
 @permission_classes((AllowAny, ))
 def getListArticles(request):
     if request.method == 'GET':
-        queryset = Article.objects.all()
+        queryset = Article.objects.all().order_by('-date')
+
+        source_serial = ArticleListSerializer(queryset, many=True)
+
+        return Response(status=status.HTTP_200_OK,data=source_serial.data)
+                
+    else :
+        return Response(status=status.HTTP_401_UNAUTHORIZED) 
+    
+
+@api_view(['GET'])
+@permission_classes((AllowAny, ))
+def getLastListArticles(request):
+    if request.method == 'GET':
+        queryset = Article.objects.all().order_by('-date')[:10]
 
         source_serial = ArticleListSerializer(queryset, many=True)
 

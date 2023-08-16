@@ -1,4 +1,4 @@
-export async function getAllFournisseur(){
+export async function getAllSlidingImages(){
     
     const response = await fetch(
         '/api/get_all_sliding_images/',
