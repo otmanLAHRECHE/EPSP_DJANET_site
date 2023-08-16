@@ -32,16 +32,17 @@ const Nav = () => {
 
   const clickPresentation = () =>{
     setActiveNav([false,true,false,false,false]);
-    navigate("/Presentation")
+    navigate("/Presentation");
   };
 
   const clickActualite = () =>{
     setActiveNav([false,false,true,false,false]);
-    navigate("/Actualite")
+    navigate("/Actualite");
   };
 
   const clickStructure = () =>{
     setActiveNav([false,false,false,true,false]);
+    navigate("/Structure");
   };
 
   const clickContact = () =>{

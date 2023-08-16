@@ -10,7 +10,7 @@ const featuredPosts = [
       title: 'Featured post this year of work',
       date: '26 Aout 2023',
       description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        'This is a wider card with supporting This is a wider card with supportingtext below as a natural lead-in to additional content.',
       image: 'https://source.unsplash.com/random?wallpapers',
       imageLabel: 'Image Text',
       type: 'Covid19'
@@ -183,7 +183,7 @@ const Actualite = () =>{
             <div className='bg-light'>
                 <div className='container'>
                 <Grid container spacing={5} sx={{ mt: 3 }}>
-                    <Grid item xs={8}>
+                    <Grid item xs={10}>
                     <Typography variant="h6" gutterBottom>
                             Tous les Article
                           </Typography>
@@ -193,7 +193,8 @@ const Actualite = () =>{
                         ))}
 
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={2}>
+                        
                                               
                     </Grid>
                 </Grid>

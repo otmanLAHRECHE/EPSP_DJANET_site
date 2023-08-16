@@ -6,6 +6,7 @@ import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
 import Presentation from "./components/Presentation";
 import Actualite from "./components/Actualite";
+import Structure from "./components/Structure";
 
 import * as serviceWorker from './serviceWorker';
 
@@ -24,6 +25,7 @@ export default class App extends Component {
                   <Route exact path="/" element={<Acceil/>} />
                   <Route exact path="/Presentation" element={<Presentation/>} />
                   <Route exact path="/Actualite" element={<Actualite/>} />
+                  <Route exact path="/Structure" element={<Structure/>} />
                 </Routes>
               </main>
               <Footer />
