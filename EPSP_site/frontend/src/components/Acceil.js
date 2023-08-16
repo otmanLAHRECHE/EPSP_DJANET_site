@@ -4,6 +4,9 @@ import 'react-slideshow-image/dist/styles.css';
 import aboutImage from '../assets/images/epsplogo.png';
 import Grid from '@mui/material/Grid';
 import FeaturedPost from './sections/FeaturedPostes';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import Sidebar from './sections/SideBar';
 
 const spanStyle = {
     padding: '20px',
@@ -35,15 +38,15 @@ const spanStyle = {
 
   const featuredPosts = [
     {
-      title: 'Featured post',
-      date: 'Nov 12',
+      title: 'Featured post this year of work',
+      date: '26 Aout 2023',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
       image: 'https://source.unsplash.com/random?wallpapers',
       imageLabel: 'Image Text',
       type: 'Covid19'
     },{
-        title: 'Featured post',
+        title: 'Featured post starting ',
         date: 'Nov 12',
         description:
           'This is a wider card with supporting text below as a natural lead-in to additional content.',
@@ -58,8 +61,74 @@ const spanStyle = {
         image: 'https://source.unsplash.com/random?wallpapers',
         imageLabel: 'Image Text',
         type: 'Recrutement'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
+      },{
+        title: 'Featured post',
+        date: 'Nov 12',
+        description:
+          'This is a wider card with supporting text below as a natural lead-in to additional content.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        type: 'Recrutement'
       },
   ];
+
+  const sidebar = {
+    archives: [
+      { title: 'Usful link one', url: '#' },
+      { title: 'Usful link two', url: '#' },
+      { title: 'Usful link three', url: '#' },
+      { title: 'Usful link four', url: '#' },
+      { title: 'Usful link five', url: '#' },
+    ],
+  };
 
 const Acceil = () => {
 
@@ -133,13 +202,17 @@ const Acceil = () => {
 
                 <Grid container spacing={5} sx={{ mt: 3 }}>
                     <Grid item xs={8}>
+                    <Typography variant="h6" gutterBottom>
+                            Last articles
+                          </Typography>
+                       <Divider />
                     {featuredPosts.map((post) => (
                           <FeaturedPost key={post.title} post={post} />
                         ))}
 
                     </Grid>
                     <Grid item xs={4}>
-                        
+                      <Sidebar archives={sidebar.archives}/>                        
                     </Grid>
 
 

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -29,7 +28,7 @@ function FeaturedPost(props) {
             </CardContent>
             <CardMedia
               component="img"
-              sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+              sx={{ width: 160, height: 200, display: { xs: 'none', sm: 'block' } }}
               image={post.image}
               alt={post.imageLabel}
             />
