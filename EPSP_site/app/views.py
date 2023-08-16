@@ -29,7 +29,8 @@ def createNewMessage(request):
     else:
         return Response(status=status.HTTP_400_BAD_REQUEST)
 
-
+@api_view(['GET'])
+@permission_classes((AllowAny, ))
 def getAllSlidingImages(request):
 
     if request.method == 'GET':
@@ -45,7 +46,8 @@ def getAllSlidingImages(request):
 
 
 
-
+@api_view(['GET'])
+@permission_classes((AllowAny, ))
 def getListArticles(request):
     if request.method == 'GET':
         queryset = Article.objects.all()
@@ -58,7 +60,8 @@ def getListArticles(request):
         return Response(status=status.HTTP_401_UNAUTHORIZED) 
     
 
-
+@api_view(['GET'])
+@permission_classes((AllowAny, ))
 def getSelectedArticle(request, id):
     if request.method == 'GET':
         queryset = Article.objects.get(id = id)

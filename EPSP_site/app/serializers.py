@@ -25,4 +25,5 @@ class ArticleListSerializer(serializers.ModelSerializer):
 class SlidingImagesSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ['id', 'title', 'image']
+        model = SlidingImage
+        fields = ['id', 'image']
