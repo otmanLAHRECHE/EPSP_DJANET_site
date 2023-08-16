@@ -136,7 +136,6 @@ const Acceil = () => {
     return(
         
         <Fragment>
-            
             <br/>
             <br/>
             <br/>
@@ -206,7 +205,7 @@ const Acceil = () => {
                             Last articles
                           </Typography>
                        <Divider />
-                    {featuredPosts.map((post) => (
+                        {featuredPosts.map((post) => (
                           <FeaturedPost key={post.title} post={post} />
                         ))}
 
@@ -214,8 +213,6 @@ const Acceil = () => {
                     <Grid item xs={4}>
                       <Sidebar archives={sidebar.archives}/>                        
                     </Grid>
-
-
                 </Grid>
 
             </div>
