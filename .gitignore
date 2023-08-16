@@ -7,3 +7,4 @@ db.sqlite3
 .vscode
 data
 node_modules/
+media/
