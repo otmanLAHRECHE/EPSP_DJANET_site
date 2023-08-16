@@ -146,7 +146,7 @@ const Acceil = () => {
                     {slideImages.map((slideImage, index)=> (
                         <div key={index}>
                             <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-                                <span style={spanStyle}>{slideImage.caption}</span>
+                                
                             </div>
                         </div>
                     ))} 
@@ -169,7 +169,7 @@ const Acceil = () => {
                     <div className='row'>
                         <div className='col-md-12 col-lg-6 mb-3'>
                         <div className='aboutImage'>
-                            <img src={aboutImage} alt='about company' />
+                            <img src={aboutImage} alt='about company' width="300" height="300"  />
                         </div>
                         </div>
                         <div className='col-md-12 col-lg-6'>
