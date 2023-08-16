@@ -28,25 +28,32 @@ const Nav = () => {
   const clickAcceil = () =>{
     setActiveNav([true,false,false,false,false]);
     navigate("/")
+    window.scrollTo(0, 0);
   };
 
   const clickPresentation = () =>{
     setActiveNav([false,true,false,false,false]);
     navigate("/Presentation");
+      window.scrollTo(0, 0);
+
   };
 
   const clickActualite = () =>{
     setActiveNav([false,false,true,false,false]);
     navigate("/Actualite");
+    window.scrollTo(0, 0);
   };
 
   const clickStructure = () =>{
     setActiveNav([false,false,false,true,false]);
     navigate("/Structure");
+    window.scrollTo(0, 0);
   };
 
   const clickContact = () =>{
     setActiveNav([false,false,false,false,true]);
+    navigate("/Contact")
+    window.scrollTo(0, 0);
   };
 
 
