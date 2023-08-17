@@ -8,3 +8,7 @@ db.sqlite3
 data
 node_modules/
 media/
+static/
+*.jpg
+*.png
+*.pdf

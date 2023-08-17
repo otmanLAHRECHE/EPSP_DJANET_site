@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-import aboutImage from '../assets/images/epsplogo.png';
+import aboutImage from '../assets/images/recruitment.jpg';
 import Grid from '@mui/material/Grid';
 import FeaturedPost from './sections/FeaturedPostes';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Sidebar from './sections/SideBar';
+import getAllSlidingImages from '../actions/SlidingImagesOps'
+import getLastListArticle from '../actions/ArticleOps'
 
 const spanStyle = {
     padding: '20px',
@@ -133,6 +135,28 @@ const spanStyle = {
 const Acceil = () => {
 
 
+  const [slidingData, setSlidingData] = React.useState([]);
+  const [lastArticlesData, setLastArticlesData] = React.useState([]);
+
+
+
+  React.useEffect(() =>{
+    const fetchData = async () => {
+      try {
+        setLastArticlesData(await getLastListArticle())
+        setSlidingData(await getAllSlidingImages());
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+
+    fetchData()
+  },[]);
+
+
+  console.log(slidingData);
+  console.log(lastArticlesData);
+
     return(
         
         <Fragment>
@@ -169,7 +193,7 @@ const Acceil = () => {
                     <div className='row'>
                         <div className='col-md-12 col-lg-6 mb-3'>
                         <div className='aboutImage'>
-                            <img src={aboutImage} alt='about company' width="300" height="300"  />
+                            <img src={aboutImage} width="300" height="300"  />
                         </div>
                         </div>
                         <div className='col-md-12 col-lg-6'>
@@ -205,9 +229,10 @@ const Acceil = () => {
                             Last articles
                           </Typography>
                        <Divider />
-                        {featuredPosts.map((post) => (
-                          <FeaturedPost key={post.title} post={post} />
+                       {lastArticlesData.map((article) => (
+                          <FeaturedPost key={article.id} post={article} />
                         ))}
+                       
 
                     </Grid>
                     <Grid item xs={4}>

@@ -1,4 +1,4 @@
-export async function getAllSlidingImages(){
+export default async function getAllSlidingImages(){
     
     const response = await fetch(
         '/api/get_all_sliding_images/',
@@ -15,7 +15,6 @@ export async function getAllSlidingImages(){
     if (response.status === 200) {
       return JSON.parse(text);
     } else {
-      console.log("failed", text);
       Object.entries(JSON.parse(text)).forEach(([key, value]) => {
         fail(`${key}: ${value}`);
       });

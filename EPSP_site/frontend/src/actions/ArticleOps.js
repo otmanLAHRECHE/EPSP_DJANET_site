@@ -1,4 +1,4 @@
-export async function getLastListArticle(){
+export default async  function getLastListArticle(){
     
     const response = await fetch(
         '/api/get_last_list_article/',
@@ -15,7 +15,6 @@ export async function getLastListArticle(){
     if (response.status === 200) {
       return JSON.parse(text);
     } else {
-      console.log("failed", text);
       Object.entries(JSON.parse(text)).forEach(([key, value]) => {
         fail(`${key}: ${value}`);
       });
@@ -43,7 +42,6 @@ export async function getListArticle(){
     if (response.status === 200) {
       return JSON.parse(text);
     } else {
-      console.log("failed", text);
       Object.entries(JSON.parse(text)).forEach(([key, value]) => {
         fail(`${key}: ${value}`);
       });
@@ -70,7 +68,6 @@ export async function getSelectedArticle(id){
   if (response.status === 200) {
     return JSON.parse(text);
   } else {
-    console.log("failed", text);
     return "no data";
   }
   
