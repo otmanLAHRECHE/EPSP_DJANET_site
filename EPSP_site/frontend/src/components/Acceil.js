@@ -153,10 +153,6 @@ const Acceil = () => {
     fetchData()
   },[]);
 
-
-  console.log(slidingData);
-  console.log(lastArticlesData);
-
     return(
         
         <Fragment>
@@ -167,9 +163,9 @@ const Acceil = () => {
             <br/>
             <div className="slide-container">
                 <Slide>
-                    {slideImages.map((slideImage, index)=> (
-                        <div key={index}>
-                            <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+                    {slidingData.map((img)=> (
+                        <div key={img.id}>
+                            <div style={{ ...divStyle, 'backgroundImage': `url(${img.image})` }}>
                                 
                             </div>
                         </div>

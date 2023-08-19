@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 import environ
 
 env = environ.Env()
@@ -60,10 +60,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'EPSP_site.urls'
 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'frontend','public')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,6 +132,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "frontend/static",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -139,5 +145,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'core.User'
 
 
-MEDIA_ROOT = BASE_DIR/'frontend/public/media'
+MEDIA_ROOT = BASE_DIR/'frontend/media'
 MEDIA_URL = '/media/'

@@ -15,9 +15,6 @@ export default async function getAllSlidingImages(){
     if (response.status === 200) {
       return JSON.parse(text);
     } else {
-      Object.entries(JSON.parse(text)).forEach(([key, value]) => {
-        fail(`${key}: ${value}`);
-      });
       return "no data";
     }
 

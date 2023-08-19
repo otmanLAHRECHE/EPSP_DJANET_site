@@ -12,11 +12,14 @@ import Contact from "./components/Contact";
 import * as serviceWorker from './serviceWorker';
 
 export default class App extends Component {
+
+  
   constructor(props) {
     super(props);
   }
 
   render() {
+
     return (
       <BrowserRouter>
             <Fragment>

@@ -15,9 +15,6 @@ export default async  function getLastListArticle(){
     if (response.status === 200) {
       return JSON.parse(text);
     } else {
-      Object.entries(JSON.parse(text)).forEach(([key, value]) => {
-        fail(`${key}: ${value}`);
-      });
       return "no data";
     }
 
@@ -42,9 +39,7 @@ export async function getListArticle(){
     if (response.status === 200) {
       return JSON.parse(text);
     } else {
-      Object.entries(JSON.parse(text)).forEach(([key, value]) => {
-        fail(`${key}: ${value}`);
-      });
+      
       return "no data";
     }
 
