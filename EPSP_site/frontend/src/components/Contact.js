@@ -1,6 +1,34 @@
 import React, { Fragment } from 'react';
 
+import TextField from '@mui/material/TextField';
+
+import Button from '@mui/material/Button';
+import { createMessage } from '../actions/MessegesOps';
+
+
 const Contact = () =>{
+
+    const [name,setName] = React.useState("");
+    const [email,setEmail] = React.useState("");
+    const [message,setMessage] = React.useState("");
+
+    const sendMessage = () =>{
+        if(name != "" && email != "" && message != ""){
+            const data = {
+                name:name,
+                email:email,
+                message:message,
+              }
+
+              createMessage(JSON.stringify(data));
+              console.log("message send..");
+        }else{
+            
+            console.log("error..");
+        };
+        
+    };
+
 
 
     return(
@@ -26,41 +54,21 @@ const Contact = () =>{
                         Individualized quality care that meets the total.
                     </h6>
                     </div>
-                    <div className='section-content'>
                     <div className='row'>
                         <div className='col-md-9 col-lg-7 mr-auto ml-auto'>
-                        <form>
-                            <div className='form-group'>
-                            <input
-                                type='text'
-                                className='form-control rounded-0'
-                                aria-describedby='emailHelp'
-                                placeholder='Enter Name...'
-                            />
+                            <TextField fullWidth  label="Nom" variant="standard" onChange={(event) => {setName(event.target.value)}}/>
+                    
+                            <TextField fullWidth  label="Email" variant="standard" onChange={(event) => {setEmail(event.target.value)}}/>
+                            
+                            <TextField fullWidth  multiline rows={4} label="Message" variant="standard" onChange={(event) => {setMessage(event.target.value)}}/>
+                            
+                            <br/>
+                            <br/>
+                            <div>
+                            <Button fullWidth variant="outlined" onClick={sendMessage}>Envoiyer</Button>
+
                             </div>
-                            <div className='form-group'>
-                            <input
-                                type='email'
-                                className='form-control rounded-0'
-                                aria-describedby='emailHelp'
-                                placeholder='Enter email...'
-                            />
-                            </div>
-                            <div className='form-group'>
-                            <textarea
-                                className='form-control rounded-0'
-                                rows='5'
-                                placeholder='Enter Message...'
-                            />
-                            </div>
-                            <div className='form-group text-center'>
-                            <button className='btn btn-block btn-primary rounded-0 mr-auto ml-auto'>
-                                Send
-                            </button>
-                            </div>
-                        </form>
                         </div>
-                    </div>
                     </div>
                         </div>
                     

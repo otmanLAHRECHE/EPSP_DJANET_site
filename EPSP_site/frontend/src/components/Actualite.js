@@ -3,171 +3,7 @@ import Grid from '@mui/material/Grid';
 import FeaturedPost from './sections/FeaturedPostes';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-
-
-const featuredPosts = [
-    {
-      title: 'Featured post this year of work',
-      date: '26 Aout 2023',
-      description:
-        'This is a wider card with supporting This is a wider card with supportingtext below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random?wallpapers',
-      imageLabel: 'Image Text',
-      type: 'Covid19'
-    },{
-        title: 'Featured post starting ',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Information'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post this year of work',
-        date: '26 Aout 2023',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Covid19'
-      },{
-          title: 'Featured post starting ',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Information'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },{
-          title: 'Featured post',
-          date: 'Nov 12',
-          description:
-            'This is a wider card with supporting text below as a natural lead-in to additional content.',
-          image: 'https://source.unsplash.com/random?wallpapers',
-          imageLabel: 'Image Text',
-          type: 'Recrutement'
-        },
-  ];
+import getListArticle from '../actions/ArticleOps';
 
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -175,6 +11,20 @@ const featuredPosts = [
   
 const Actualite = () =>{
 
+  const [lastArticlesData, setLastArticlesData] = React.useState([]);
+  
+
+  React.useEffect(() =>{
+    const fetchData = async () => {
+      try {
+        setLastArticlesData(await getListArticle());
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+
+    fetchData()
+  },[]);
 
     return(
 
@@ -192,8 +42,8 @@ const Actualite = () =>{
                             Tous les Article
                           </Typography>
                        <Divider />
-                        {featuredPosts.map((post) => (
-                          <FeaturedPost key={post.title} post={post} />
+                        {lastArticlesData.map((article) => (
+                          <FeaturedPost key={article.id} post={article} />
                         ))}
 
                     </Grid>
