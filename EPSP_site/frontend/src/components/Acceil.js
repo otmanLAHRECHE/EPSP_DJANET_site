@@ -23,110 +23,12 @@ const spanStyle = {
     backgroundSize: 'cover',
     height: '400px'
   }
-  const slideImages = [
-    {
-      url: 'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-      caption: 'Slide 1'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
-      caption: 'Slide 2'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-      caption: 'Slide 3'
-    },
-  ];
-
-  const featuredPosts = [
-    {
-      title: 'Featured post this year of work',
-      date: '26 Aout 2023',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random?wallpapers',
-      imageLabel: 'Image Text',
-      type: 'Covid19'
-    },{
-        title: 'Featured post starting ',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Information'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },{
-        title: 'Featured post',
-        date: 'Nov 12',
-        description:
-          'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: 'https://source.unsplash.com/random?wallpapers',
-        imageLabel: 'Image Text',
-        type: 'Recrutement'
-      },
-  ];
-
+  
   const sidebar = {
     archives: [
-      { title: 'Usful link one', url: '#' },
-      { title: 'Usful link two', url: '#' },
-      { title: 'Usful link three', url: '#' },
+      { title: 'DSP DJANET Site web', url: '#' },
+      { title: 'EPH DJANET Site web', url: '#' },
+      { title: 'La Fonction Public Site web', url: '#' },
       { title: 'Usful link four', url: '#' },
       { title: 'Usful link five', url: '#' },
     ],
@@ -137,14 +39,12 @@ const Acceil = () => {
 
   const [slidingData, setSlidingData] = React.useState([]);
   const [lastArticlesData, setLastArticlesData] = React.useState([]);
-
-
-
+  
   React.useEffect(() =>{
     const fetchData = async () => {
       try {
-        setLastArticlesData(await getLastListArticle())
         setSlidingData(await getAllSlidingImages());
+        setLastArticlesData(await getLastListArticle());
       } catch (error) {
         console.log("error", error);
       }
@@ -153,7 +53,12 @@ const Acceil = () => {
     fetchData()
   },[]);
 
+
+    console.log(slidingData);
+
     return(
+
+     
         
         <Fragment>
             <br/>

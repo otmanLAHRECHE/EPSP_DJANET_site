@@ -8,6 +8,7 @@ import Presentation from "./components/Presentation";
 import Actualite from "./components/Actualite";
 import Structure from "./components/Structure";
 import Contact from "./components/Contact";
+import ArticleDetails from "./components/ArticleDetails";
 
 import * as serviceWorker from './serviceWorker';
 
@@ -31,6 +32,7 @@ export default class App extends Component {
                   <Route exact path="/Actualite" element={<Actualite/>} />
                   <Route exact path="/Structure" element={<Structure/>} />
                   <Route exact path="/Contact" element={<Contact/>} />
+                  <Route exact path="/ArticleDetails" element={<ArticleDetails/>} />
                 </Routes>
               </main>
               <Footer />

@@ -5,14 +5,23 @@ import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
+import { useNavigate } from "react-router-dom";
 
-function ExtractImageName(name) {
-  
-  return name;
-}
+
 
 function FeaturedPost(props) {
     const { post } = props;
+    const navigate = useNavigate();
+
+    const learnMore = () =>{
+      console.log("Going to...=>"+ post.id);
+      navigate("/ArticleDetails",{
+        state: {
+          id: post.id
+        }
+      });
+      window.scrollTo(0, 0);
+    };
 
     return (
           <Card sx={{ display: 'flex' , mt: 1, mb: 1}}>
@@ -24,11 +33,11 @@ function FeaturedPost(props) {
                 {post.date}
               </Typography>
               <Typography variant="subtitle1" paragraph>
-                {post.desc}
+                {post.desc.slice(0, 140) + "..."}
               </Typography>
 
             <Chip label={post.article_type} />
-            <Button size="small">Learn More</Button>
+            <Button size="small" onClick={learnMore}>Learn More</Button>
             </CardContent>
             <CardMedia
               component="img"
