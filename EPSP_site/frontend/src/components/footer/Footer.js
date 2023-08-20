@@ -14,10 +14,7 @@ const footer = () => {
             <div className='footer-content'>
               <p>
                 <small className='text-muted'>
-                  Aenean suscipit eget mi act fermentum phasellus vulputate
-                  turpis tincidunt. Aenean suscipit eget. Aenean suscipit eget
-                  mi act fermentum phasellus vulputate turpis tincidunt. Aenean
-                  suscipit ege Aenean suscipit eget mi act fermentum phasellus.
+                L ’établissement public de santé de proximité (E.P.S.P) de Djanet est crée dans le cadre de la mise en œuvre de la nouvelle carte sanitaire qui est régie en 2007 conformément aux dispositions du décret exécutif N° 07- 140 du 19 mai relative aux activités d’une polyclinique laquelle polyclinique, constitue une unité de base médicalisée en matière de soins de proximité afin de réhabiliter la polyclinique en tant que prescriptrice de soins de base.
                 </small>
               </p>
               <button className='btn btn-sm btn-primary rounded-0'>
@@ -80,7 +77,7 @@ const footer = () => {
                 <small>Address : centre ville Djanet, DJANET</small>
               </p>
               <p className='text-muted'>
-                <small>Fax : +213 (0) 123 456 789</small>
+                <small>Fax : 0.29.48.56.02</small>
               </p>
               <p className='text-muted'>
                 <small>E-mail : epspdjanet@email.com</small>

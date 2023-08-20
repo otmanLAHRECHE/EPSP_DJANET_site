@@ -60,7 +60,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'EPSP_site.urls'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'frontend','public')
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'frontend','static')
 
 TEMPLATES = [
     {

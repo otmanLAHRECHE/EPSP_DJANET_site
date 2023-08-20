@@ -12,7 +12,7 @@ const topBar = () => {
           <div className='d-flex pt-2 pb-2'>
             <div className='d-flex align-item-center mr-3'>
               <CallRoundedIcon fontSize="small"/>
-              <small>+213 (0) 123 456 789</small>
+              <small>0.29.48.56.02</small>
             </div>
             <div className='d-flex align-item-center'>
               <MailIcon fontSize="small"/>
